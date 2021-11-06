@@ -49,6 +49,20 @@ header li {
 	margin-left: 45px;
 }
 
+header .burger {
+	display: none;
+	width: 15%;
+	align-self: center;
+	justify-self: end;
+	cursor: pointer;
+}
+.burger > div {
+	background: var(--primaryColor);
+	height: 4px;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
 header a:hover,
 footer a:hover {
 	color: var(--secondaryColor);
@@ -139,4 +153,28 @@ footer > p > span {
 
 .socialLinks {
 	font-weight: 800;
+}
+
+/* MEDIA QUERYS */
+
+@media screen and (max-width: 600px) {
+	header ul {
+		display: none;
+	}
+	header .burger {
+		display: block;
+	}
+	.container {
+		grid-template-columns: 1fr;
+	}
+	.big {
+		grid-column: 1/2;
+	}
+
+	.gridFooter {
+		grid-template-columns: 1fr;
+	}
+	.gridFooter h3 {
+		margin: 3vh 0;
+	}
 }
